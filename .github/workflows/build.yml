@@ -44,7 +44,6 @@ jobs:
           echo -e "\n# Remove any old files in the build folder"
           rm -rfv out/build/*
           echo -e "\n# Move the generated docs to the newly-checked-out repo, to be committed and pushed"
-          rsync -vaI LICENSE out/
           rsync -vaI README.md out/
           rsync -vaI build/ out/build
           echo -e "\n# Removing TSC incremental file"

@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import config from '../config.json';
 
 export const fileNameRegex = /\.?\/(\w*)\.?\w*$/;
 
@@ -12,6 +13,9 @@ export function extractFileName(fileUrl: string, defaultTo?: unknown) {
 }
 
 export async function loadFileNames(folderUrl: string) {
+  /* line to work with github pages */
+  if (folderUrl.includes('imgs')) return config.images.map((imgName) => `./imgs/${imgName}`);
+
   const urlFolderName = folderUrl.match(fileNameRegex)?.[1] ?? '';
   const urlValidator = new RegExp(`.?/${urlFolderName}(/\\w+/?)+.\\w+`);
 

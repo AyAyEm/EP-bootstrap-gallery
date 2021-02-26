@@ -1,0 +1,9 @@
+# Black hole folder
+node_modules
+
+# Build folder
+build
+
+# Lock files
+package-lock.json
+yarn.lock

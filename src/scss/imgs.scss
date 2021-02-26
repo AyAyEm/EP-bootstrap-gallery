@@ -1,0 +1,23 @@
+#imgs {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  span.img-title {
+    font-family: serif monospace;
+    font-weight: 450;
+    font-size: large;
+  }
+
+  img {
+    height: 200px;
+    cursor: pointer;
+  }
+}

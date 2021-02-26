@@ -1,4 +1,4 @@
-name: typescript compile
+name: webpack build
 
 on:
   push:
